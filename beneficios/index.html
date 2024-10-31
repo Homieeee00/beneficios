@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beneficios Nutricionales</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Fondo blanco */
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .center-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%; /* Ancho ajustable */
+            max-width: 400px;
+            border-radius: 50%; /* Hacer la imagen central circular */
+            object-fit: cover; /* Para que la imagen se ajuste al círculo */
+            z-index: 1;
+        }
+        .ingredient {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            width: auto; /* Se ajusta automáticamente */
+            max-width: 300px; /* Ancho máximo para evitar superposición */
+            overflow: visible; /* Asegurarse de que no haya recuadro */
+        }
+        .ingredient img {
+            width: 200px; /* Tamaño más grande */
+            height: auto;
+            margin-right: 10px; /* Espacio entre imagen y texto */
+            border: none; /* Sin borde */
+            background: none; /* Sin fondo */
+            outline: none; /* Sin contorno */
+        }
+        .ingredient-info {
+            font-size: 0.9em;
+            max-width: 150px; /* Ancho máximo de la información */
+        }
+        .ingredient-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .arrow {
+            position: absolute;
+            width: 80px;
+            height: 2px;
+            background-color: #999;
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -4px;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #999;
+            border-right: 2px solid #999;
+            transform: rotate(45deg);
+        }
+
+        /* Posicionamiento de los ingredientes */
+        .camote { top: 5%; left: 5%; }
+        .amaranto { top: 5%; right: 5%; flex-direction: row-reverse; }
+        .avena { bottom: 5%; left: 5%; }
+        .platano { bottom: 5%; right: 5%; flex-direction: row-reverse; }
+
+        /* Flechas específicas */
+        .arrow-camote { top: 60%; left: 150px; transform: rotate(-30deg); }
+        .arrow-amaranto { top: 60%; right: 150px; transform: rotate(30deg); }
+        .arrow-avena { bottom: 60%; left: 150px; transform: rotate(30deg); }
+        .arrow-platano { bottom: 60%; right: 150px; transform: rotate(-30deg); }
+
+        .header {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 2;
+        }
+        .subtitle {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="" alt="Logo">
+        </div>
+        <div class="subtitle">NUESTRO SOBRE CONTIENE 1.2 KG</div>
+        <img src="waffles.png" alt="Waffle central" class="center-image">
+
+        <!-- Camote -->
+        <div class="ingredient camote">
+            <img src="camotee.png" alt="Camote">
+            <div class="ingredient-info">
+                <div class="ingredient-title">CAMOTE</div>
+                <p>El camote se caracteriza por un contenido de: Vitamina A, Vitamina C, Potasio, Vitamina B6, B5 y B3</p>
+            </div>
+            <div class="arrow arrow-camote"></div>
+        </div>
+
+        <!-- Amaranto -->
+        <div class="ingredient amaranto">
+            <img src="amarantoo.png" alt="Amaranto">
+            <div class="ingredient-info">
+                <div class="ingredient-title">AMARANTO</div>
+                <p>El amaranto es un cereal que tiene un alto contenido en: Fibra, Calcio y Vitamina B.</p>
+            </div>
+            <div class="arrow arrow-amaranto"></div>
+        </div>
+
+        <!-- Avena -->
+        <div class="ingredient avena">
+            <img src="avena.png" alt="Avena">
+            <div class="ingredient-info">
+                <div class="ingredient-title">AVENA</div>
+                <p>La avena es un cereal que se destaca por ser fuente de Proteína, Zinc, Fósforo, Hierro, Magnesio y grasas vegetales no saturadas.</p>
+            </div>
+            <div class="arrow arrow-avena"></div>
+        </div>
+
+        <!-- Plátano -->
+        <div class="ingredient platano">
+            <img src="platano.png" alt="Plátano">
+            <div class="ingredient-info">
+                <div class="ingredient-title">PLÁTANO</div>
+                <p>El plátano se caracteriza por: Ser una importante fuente de Potasio y Fibra, Vitamina B6, Vitamina C, Ácido fólico.</p>
+            </div>
+            <div class="arrow arrow-platano"></div>
+        </div>
+    </div>
+</body>
+</html>
